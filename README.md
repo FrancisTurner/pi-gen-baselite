@@ -60,6 +60,7 @@ wait a minute or so for the pi to boot (check by pinging its IP address) then
 ssh to it as user server password server. Change the password and set up 
 whatever you need on it (i.e. your preferred web server, email etc.)
 
+```
 $ ping 192.168.1.250
 PING 192.168.1.250 (192.168.1.250) 56(84) bytes of data.
 64 bytes from 192.168.1.250: icmp_seq=6 ttl=63 time=8.70 ms
