@@ -1,0 +1,5 @@
+IMG_NAME=serverpi
+FIRST_USER_NAME=server
+FIRST_USER_PASS=server
+TARGET_HOSTNAME=serverpi
+ENABLE_SSH=1
