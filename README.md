@@ -17,13 +17,18 @@ The repo creates a Raspbian Lite image with some minor tweaks that make it a goo
  * RPI pi-gen tool ( https://github.com/RPi-Distro/pi-gen )
  * my pi-gen-utils scripts (https://github.com/FrancisTurner/pi-gen-utils )
 
+Generally speaking pi-gen works better in a docker environment. In the non-docker world failures
+can result in broken setups that are usually, but not always, fixed by logging out. In the
+docker version you just have a dead docker image to delete
+
 ## Usage
 
 
 ```
 cd /path/to/pi-gen/projects
-git clone
-git clone
+git clone https://github.com/RPi-Distro/pi-gen.git
+git clone https://github.com/FrancisTurner/pi-gen-utils.git
+git clone https://github.com/FrancisTurner/pi-gen-baselite.git
 
 sudo cp pi-gen-utils/*.sh /usr/local/bin
 cd pi-gen-baselite
@@ -83,4 +88,6 @@ permitted by applicable law.
 server@serverpi:~ $ passwd
 ...
 ```
+Once you've checked that the image you've just built works, copy the files to your own project and edit/add more as required
 
+Share & Enjoy
