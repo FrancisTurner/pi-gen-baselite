@@ -45,6 +45,7 @@ restorepigen.sh
 Burn pi image - using tool of choice e.g. Balena Etcher ( https://www.balena.io/etcher/ )
 
 Edit samplenetcfg.txt and save to the boot partition on the newly flashed SD card as netcfg.txt.
+
 Notes:
  * You may need to eject and reinsert the SD card for your OS to correcly
 mount the newly created partition(s). 
@@ -56,12 +57,13 @@ can be tricky to figure out how to connect
 to your server and the server address may change over time, which is usually
 a bad thing. 
 
-Optionally create a wifi profile wpa_supoplicant.conf in the boot partition 
-following these instructions - https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/
+Optionally create a wifi profile wpa_supplicant.conf in the boot partition 
+following these instructions - https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/. 
+If you are using the wifi then you will probably need to specify a wlan0 interface in netcfg.txt instead of/as well as the eth0 one.
 
 eject the SD card, stick it in the pi, connect network cable and power the pi on
 
-wait a minute or so for the pi to boot (check by pinging its IP address) then 
+wait a minute or so for the pi to boot (check by pinging its IP address e.g. 192.168.1.250) then 
 ssh to it as user server password server. Change the password and set up 
 whatever you need on it (i.e. your preferred web server, email etc.)
 
@@ -72,11 +74,11 @@ PING 192.168.1.250 (192.168.1.250) 56(84) bytes of data.
 64 bytes from 192.168.1.250: icmp_seq=7 ttl=63 time=5.11 ms
 ^C
 $ ssh server@192.168.1.250
-The authenticity of host '192.168.101.250 (192.168.101.250)' can't be established.
+The authenticity of host '192.168.1.250 (192.168.1.250)' can't be established.
 ECDSA key fingerprint is SHA256:E7QQpIhTTvh8WfaFaVUF2IYRP/bNyqSQM7eyU4t9Fcg.
 Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added '192.168.101.250' (ECDSA) to the list of known hosts.
-server@192.168.101.250's password: 
+Warning: Permanently added '192.168.1.250' (ECDSA) to the list of known hosts.
+server@192.168.1.250's password: 
 Linux serverpi 4.19.118-v7+ #1311 SMP Mon Apr 27 14:21:24 BST 2020 armv7l
 
 The programs included with the Debian GNU/Linux system are free software;
