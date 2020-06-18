@@ -92,4 +92,10 @@ server@serverpi:~ $ passwd
 ```
 Once you've checked that the image you've just built works, copy the files to your own project and edit/add more as required
 
+## Sample Image
+
+In case you want to live dangerously and trust an image created by some random 
+stranger on the internet here is a recent version of the image you can download to
+burn on your SD-card - http://raspbian.devtru.st/files/serverpi-lite.zip
+
 Share & Enjoy
